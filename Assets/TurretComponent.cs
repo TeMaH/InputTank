@@ -25,6 +25,6 @@ public class TurretComponent : MonoBehaviour
     public void Fire()
     {
         var shellInstance = Instantiate(_shell, _shellPivot.position, _shellPivot.rotation);
-        shellInstance.velocity = _launchForce * Random.Range(0.5f, 1.5f) * _shellPivot.forward;
+        shellInstance.linearVelocity = _launchForce * Random.Range(0.5f, 1.5f) * _shellPivot.forward;
     }
 }
